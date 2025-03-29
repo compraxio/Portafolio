@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">  <!-- Cambiado de "en" a "es" -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Portafolio de Luis Ángel</title>  <!-- Título más personalizado -->
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#home">Inicio</a>  <!-- Traducido -->
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#about">Sobre mí</a>  <!-- Traducido -->
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#skills">Habilidades</a>  <!-- Traducido -->
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Vista previa -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">Luis Angel Acuña Cardenas</h1>  <!-- Nombre se mantiene -->
+        <p class="home__subtitle">Desarrollador Web, Programador Python</p>  <!-- Traducido -->
+      </section>
+      <!-- Acerca de mí -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title">Sobre mí</h2>  <!-- Traducido -->
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            Mi nombre es Luis Ángel Acuñas Cárdenas, tengo 16 años y cuento con una experiencia considerable en programación, especialmente en Python y HTML. Además, tengo conocimientos en modelado 3D y edición de video, lo que me permite abordar proyectos creativos y técnicos con confianza.
+          </p>
+          <img
+            class="info-block__img"
+            src="../static/img/profile.png"
+            alt="me"
+            width="250"
+            height="250"
+          />
+        </div>
+      </section>
+      <!-- Sección de competencias -->
+      <section class="main__skills skills" id="skills">
+        <h2 class="skills__title">Mis Habilidades</h2>  <!-- Traducido -->
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/python.png"
+                alt="python"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Python</span>  <!-- Traducido -->
+              <input class="skill__button" type="submit" name="button_python" value="VER PROYECTOS">  <!-- Traducido -->
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/discord.png"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Discord</span>
+              <input class="skill__button" type="submit" name="button_discord" value="VER PROYECTOS">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/html.png"
+                alt="html"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">HTML</span>
+              <input class="skill__button" type="submit" name="button_html" value="VER PROYECTOS">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/db.webp"
+                alt="SQL"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">DB</span>
+              <input class="skill__button" type="submit" name="button_db" value="VER PROYECTOS">
+            </li>
+          </ul>
+        </form>
+        {% if button_python%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/python-project.svg" alt="project" width="500">
+              <a class="project__link" href="https://github.com/compraxio/Descargador-de-yotube/archive/refs/heads/main.zip">Descargar descargador de videos</a>
+          </div>
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/python-project2.svg" alt="project" width="500">
+              <a class="project__link" href="https://github.com/compraxio/Transcriptor-de-texto/archive/refs/heads/main.zip">Descargar transcriptor de audio</a>
+          </div>
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/python-project3.svg" alt="project" width="500">
+              <a class="project__link" href="https://github.com/compraxio/Traductor/archive/refs/heads/main.zip">Traductor</a>
+          </div>
+        {% endif %}
+        {% if button_discord%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/discort-project.svg" alt="project" width="500">
+              <a class="project__link" href="https://github.com/compraxio/Bot-de-contaminacion-de-discord/archive/refs/heads/main.zip">Descargar bot de contaminacion de discord</a>
+          </div>
+        {% endif %}
+        {% if button_html%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/Nada.svg" alt="project" width="500">
+              <a class="project__link" href="">No hay proyectos disponibles</a>
+          </div>
+        {% endif %}
+        {% if button_db%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/Nada.svg" alt="project" width="500">
+              <a class="project__link" href="">No hay proyectos disponibles</a>
+          </div>
+        {% endif %}
+      </section>
+      <!-- Formulario de contacto -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="feedback__title">Comentarios</h2>  <!-- Traducido -->
+        <form action="/feedback" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="Introduce tu email" required>  <!-- Traducido -->
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Tu comentario"></textarea>  <!-- Traducido -->
+          </label>
+          <button class="form__button" type="submit">Enviar</button>  <!-- Traducido -->
+        </form>
+      </section>
+    </main>
+    <!-- Pie de página -->
+    <footer>
+
+    </footer>
+  </body>
+</html>
