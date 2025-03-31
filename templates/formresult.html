@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Documento HTML para mostrar los resultados del formulario -->
+<html lang="es">
 <head>
+    <!-- Configuración de caracteres y viewport para responsividad -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página de resultados -->
     <title>Resultados del Formulario</title>
+    <!-- Vinculación con archivo de estilos CSS -->
     <link rel="stylesheet" href="../static/css/style.css" />
 </head>
 <body>
-    <div class="form-yo">
-        <h2 >Resultados del Formulario</h2>
-        <p class="form-yo2"><strong>Correo:</strong> {{Correo}}</p>
-        <p class="form-yo2"><strong>Mensaje:</strong> {{Mensaje}}</p>
+    <!-- Contenedor principal para mostrar los resultados del formulario -->
+    <div class="formulario-resultados form-yo">
+        <h2 class="formulario-resultados__titulo">Resultados del Formulario</h2>
+        <!-- Visualización del correo electrónico enviado -->
+        <p class="formulario-resultados__campo form-yo2"><strong>Correo:</strong> {{Correo}}</p>
+        <!-- Visualización del mensaje enviado -->
+        <p class="formulario-resultados__campo form-yo2"><strong>Mensaje:</strong> {{Mensaje}}</p>
     </div>
 
-    <section class="about">
-    <h2 class="about__title">ABOUT ME</h2>
-    <div class="info-block">
-        <p class="info-block__text">
-        Mi nombre es Luis Ángel Acuñas Cárdenas, tengo 16 años y cuento con una experiencia considerable en programación, especialmente en Python y HTML. Además, tengo conocimientos en modelado 3D y edición de video, lo que me permite abordar proyectos creativos y técnicos con confianza.
-        </p>
-        <img
-        class="info-block__img"
-        src="../static/img/profile.png"
-        alt="me"
-        width="250"
-        height="250"
-        />
-    </div>
-    </section>
+    <!-- Sección Sobre mí -->
+    <section class="main__feedback feedback" id="feedback">
+        <!-- Título de la sección -->
+        <h2 class="feedback__title">Quieres enviar el formulario?</h2>
+        <!-- Formulario de contacto con validación -->
+        <form action="/gracias" method="POST" class="feedback__form form">
+            <input type="hidden" name="email" value="{{Correo}}">
+            <input type="hidden" name="text" value="{{Mensaje}}">
+            <button class="form__button" type="submit" name="button_emailsi">Si</button>
+            <button class="form__button" type="submit" name="button_emailno">No</button>
+        </form>
+        </section>
 </body>
 </html>

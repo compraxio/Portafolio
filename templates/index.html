@@ -1,96 +1,121 @@
 <!DOCTYPE html>
-<html lang="es">  <!-- Cambiado de "en" a "es" -->
+<!-- Documento HTML en español para mejor accesibilidad -->
+<html lang="es">
   <head>
+    <!-- Configuración de caracteres y viewport para responsividad -->
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Vinculación con archivo de estilos CSS -->
     <link rel="stylesheet" href="../static/css/style.css" />
-    <title>Portafolio de Luis Ángel</title>  <!-- Título más personalizado -->
-  </head>
+    <!-- Título de la página web -->
+    <title>Portafolio de Luis Ángel</title>
   <body>
+    <!-- Encabezado principal con navegación -->
     <header class="header">
+      <!-- Barra de navegación principal -->
       <nav class="header__nav main-nav">
+        <!-- Lista de enlaces de navegación -->
         <ul class="main-nav__list main-list">
+          <!-- Elemento de navegación: Inicio -->
           <li class="main-list__item list-item">
-            <a class="list-item__link" href="#home">Inicio</a>  <!-- Traducido -->
+            <a class="list-item__link" href="#home">Inicio</a>
           </li>
+          <!-- Elemento de navegación: Sobre mí -->
           <li class="main-list__item list-item">
-            <a class="list-item__link" href="#about">Sobre mí</a>  <!-- Traducido -->
+            <a class="list-item__link" href="#about">Sobre mí</a>
           </li>
+          <!-- Elemento de navegación: Habilidades -->
           <li class="main-list__item list-item">
-            <a class="list-item__link" href="#skills">Habilidades</a>  <!-- Traducido -->
+            <a class="list-item__link" href="#skills">Habilidades</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main">
-      <!-- Vista previa -->
+      <!-- Sección de inicio (Hero section) -->
       <section class="main__home home" id="home">
-        <h1 class="home__title">Luis Angel Acuña Cardenas</h1>  <!-- Nombre se mantiene -->
-        <p class="home__subtitle">Desarrollador Web, Programador Python</p>  <!-- Traducido -->
+        <!-- Título principal con nombre completo -->
+        <h1 class="home__title">Luis Angel Acuña Cardenas</h1>
+        <!-- Subtítulo con descripción profesional -->
+        <p class="home__subtitle">Desarrollador Web, Programador Python</p>
       </section>
-      <!-- Acerca de mí -->
+
+      <!-- Sección Sobre mí con información personal -->
       <section class="main__about about" id="about">
-        <h2 class="about__title">Sobre mí</h2>  <!-- Traducido -->
+        <!-- Título de la sección -->
+        <h2 class="about__title">Sobre mí</h2>
+        <!-- Contenedor de información personal -->
         <div class="about__info info-block">
+          <!-- Texto descriptivo con biografía -->
           <p class="info-block__text">
             Mi nombre es Luis Ángel Acuñas Cárdenas, tengo 16 años y cuento con una experiencia considerable en programación, especialmente en Python y HTML. Además, tengo conocimientos en modelado 3D y edición de video, lo que me permite abordar proyectos creativos y técnicos con confianza.
           </p>
+          <!-- Imagen de perfil circular -->
           <img
             class="info-block__img"
             src="../static/img/profile.png"
-            alt="me"
+            alt="Foto de perfil de Luis Ángel"
             width="250"
             height="250"
           />
         </div>
       </section>
-      <!-- Sección de competencias -->
+
+      <!-- Sección de Habilidades y Competencias -->
       <section class="main__skills skills" id="skills">
-        <h2 class="skills__title">Mis Habilidades</h2>  <!-- Traducido -->
+        <!-- Título de la sección -->
+        <h2 class="skills__title">Mis Habilidades</h2>
         <form action="/" method="POST">
           <ul class="skills__list skills-list">
+            <!-- Habilidad: Python -->
             <li class="skills-list__skill skill">
               <img
                 class="skill__img"
                 src="../static/img/python.png"
-                alt="python"
+                alt="Logotipo de Python"
                 width="150"
                 height="150"
               />
-              <span class="skill__info">Python</span>  <!-- Traducido -->
-              <input class="skill__button" type="submit" name="button_python" value="VER PROYECTOS">  <!-- Traducido -->
+              <span class="skill__info">Python</span>
+              <input class="skill__button" type="submit" name="button_python" value="VER PROYECTOS">
             </li>
+
+            <!-- Habilidad: Discord (Desarrollo de Bots) -->
             <li class="skills-list__skill skill">
               <img
                 class="skill__img"
                 src="../static/img/discord.png"
-                alt="discord"
+                alt="Logotipo de Discord"
                 width="150"
                 height="150"
               />
               <span class="skill__info">Discord</span>
               <input class="skill__button" type="submit" name="button_discord" value="VER PROYECTOS">
             </li>
+
+            <!-- Habilidad: HTML -->
             <li class="skills-list__skill skill">
               <img
                 class="skill__img"
                 src="../static/img/html.png"
-                alt="html"
+                alt="Logotipo de HTML5"
                 width="150"
                 height="150"
               />
               <span class="skill__info">HTML</span>
               <input class="skill__button" type="submit" name="button_html" value="VER PROYECTOS">
             </li>
+
+            <!-- Habilidad: Bases de Datos -->
             <li class="skills-list__skill skill">
               <img
                 class="skill__img"
                 src="../static/img/db.webp"
-                alt="SQL"
+                alt="Icono de Base de Datos"
                 width="150"
                 height="150"
               />
@@ -99,56 +124,74 @@
             </li>
           </ul>
         </form>
+        <!-- Proyectos de Python -->
         {% if button_python%}
+          <!-- Proyecto: Descargador de Videos -->
           <div class="skills__project project" id="project">
-              <img class="project__img" src="../static/img/python-project.svg" alt="project" width="500">
+              <img class="project__img" src="../static/img/python-project.svg" alt="Interfaz del descargador de videos" width="500">
               <a class="project__link" href="https://github.com/compraxio/Descargador-de-yotube/archive/refs/heads/main.zip">Descargar descargador de videos</a>
           </div>
+          <!-- Proyecto: Transcriptor de Audio -->
           <div class="skills__project project" id="project">
-              <img class="project__img" src="../static/img/python-project2.svg" alt="project" width="500">
+              <img class="project__img" src="../static/img/python-project2.svg" alt="Interfaz del transcriptor de audio" width="500">
               <a class="project__link" href="https://github.com/compraxio/Transcriptor-de-texto/archive/refs/heads/main.zip">Descargar transcriptor de audio</a>
           </div>
+          <!-- Proyecto: Traductor -->
           <div class="skills__project project" id="project">
-              <img class="project__img" src="../static/img/python-project3.svg" alt="project" width="500">
+              <img class="project__img" src="../static/img/python-project3.svg" alt="Interfaz del traductor" width="500">
               <a class="project__link" href="https://github.com/compraxio/Traductor/archive/refs/heads/main.zip">Traductor</a>
           </div>
         {% endif %}
+
+        <!-- Proyectos de Discord -->
         {% if button_discord%}
+          <!-- Proyecto: Bot de Contaminación -->
           <div class="skills__project project" id="project">
-              <img class="project__img" src="../static/img/discort-project.svg" alt="project" width="500">
-              <a class="project__link" href="https://github.com/compraxio/Bot-de-contaminacion-de-discord/archive/refs/heads/main.zip">Descargar bot de contaminacion de discord</a>
+              <img class="project__img" src="../static/img/discort-project.svg" alt="Interfaz del bot de contaminación" width="500">
+              <a class="project__link" href="https://github.com/compraxio/Bot-de-contaminacion-de-discord/archive/refs/heads/main.zip">Descargar bot de contaminación de Discord</a>
           </div>
         {% endif %}
+
+        <!-- Proyectos de HTML (Sin proyectos disponibles) -->
         {% if button_html%}
           <div class="skills__project project" id="project">
-              <img class="project__img" src="../static/img/Nada.svg" alt="project" width="500">
+              <img class="project__img" src="../static/img/Nada.svg" alt="Sin proyectos disponibles" width="500">
               <a class="project__link" href="">No hay proyectos disponibles</a>
           </div>
         {% endif %}
+
+        <!-- Proyectos de Base de Datos (Sin proyectos disponibles) -->
         {% if button_db%}
           <div class="skills__project project" id="project">
-              <img class="project__img" src="../static/img/Nada.svg" alt="project" width="500">
+              <img class="project__img" src="../static/img/Nada.svg" alt="Sin proyectos disponibles" width="500">
               <a class="project__link" href="">No hay proyectos disponibles</a>
           </div>
         {% endif %}
       </section>
-      <!-- Formulario de contacto -->
+
+      <!-- Sección de Formulario de Contacto y Comentarios -->
       <section class="main__feedback feedback" id="feedback">
-        <h2 class="feedback__title">Comentarios</h2>  <!-- Traducido -->
+        <!-- Título de la sección -->
+        <h2 class="feedback__title">Comentarios</h2>
+        <!-- Formulario de contacto con validación -->
         <form action="/feedback" method="POST" class="feedback__form form">
+          <!-- Campo de correo electrónico -->
           <label for="email">
-            <input type="email" class="form__input" name="email" id="email" placeholder="Introduce tu email" required>  <!-- Traducido -->
+            <input type="email" class="form__input" name="email" id="email" placeholder="Introduce tu email" required>
           </label>
+          <!-- Campo de texto para comentarios -->
           <label for="text">
-            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Tu comentario"></textarea>  <!-- Traducido -->
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Tu comentario"></textarea>
           </label>
-          <button class="form__button" type="submit">Enviar</button>  <!-- Traducido -->
+          <!-- Botón de envío del formulario -->
+          <button class="form__button" type="submit">Enviar</button>
         </form>
       </section>
     </main>
-    <!-- Pie de página -->
-    <footer>
 
+    <!-- Pie de página (preparado para contenido futuro) -->
+    <footer>
+      <!-- Espacio reservado para información adicional, enlaces sociales o derechos de autor -->
     </footer>
   </body>
 </html>
