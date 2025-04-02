@@ -10,7 +10,27 @@ body::-webkit-scrollbar {
 html {
   scroll-behavior: smooth;
 }
+.for_comentarios {
+  font: inherit;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(111.97deg, #71d2f6 35.63%, #24497d 150.16%);
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  box-shadow: 0px 0px 10px 0px#24497d;
+}
 
+.Formulario {
+  border: #0cdbed solid 2px;
+  margin: 30px;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px 0px#24497d;
+}
 /* Estilos base del cuerpo de la página */
 body {
   margin: 0;
@@ -20,13 +40,13 @@ body {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.2em;
-  background: linear-gradient(180deg, #392657 0%, rgba(57, 38, 87, 0.8) 100%);
+  background: linear-gradient(180deg, #06194d 0%, #24497d 100%);
   color: #ffffff;
 }
 /* Estilos del contenedor del formulario de resultados */
 .form-yo {
   padding: 20px;
-  border: 2px solid #a178b9;
+  border: 2px solid #71d2f6;
   margin-top: 15px;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -38,7 +58,7 @@ body {
 
 /* Estilos de los campos del formulario de resultados */
 .form-yo2 {
-  border: 2px solid #a178b9;
+  border: 2px solid #71d2f6;
   border-radius: 20px;
   padding: 10px 20px;
   width: 100%;
@@ -119,7 +139,7 @@ ul {
   width: 55%;
   height: 3px;
   bottom: -12px;
-  background: #a178b9; /* Color morado característico */
+  background: #71d2f6; /* Color morado característico */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -146,7 +166,7 @@ ul {
   letter-spacing: 0.3em; /* Espaciado entre letras */
   font-size: 70px;
   text-align: center;
-  color: #a178b9; /* Color morado característico */
+  color: #71d2f6; /* Color morado característico */
   line-height: 1;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Sombra para mejor legibilidad */
 }
@@ -169,7 +189,7 @@ ul {
   font-size: 60px;
   position: relative;
   text-align: left;
-  color: #cc8bf2; /* Color morado más claro para títulos */
+  color: #71d2f6; /* Color morado más claro para títulos */
   line-height: 1;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Sombra para profundidad */
   display: flex;
@@ -220,7 +240,7 @@ ul {
   font-size: 60px;
   position: relative;
   text-align: left;
-  color: #cc8bf2; /* Color morado claro consistente */
+  color: #71d2f6; /* Color morado claro consistente */
   line-height: 1;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Sombra para profundidad */
   display: flex;
@@ -274,7 +294,7 @@ ul {
 }
 
 .skill__button:hover {
-  color: #cc8bf2;
+  color: #71d2f6;
 }
 
 /* Contenedor de proyecto individual */
@@ -308,7 +328,7 @@ ul {
   width: 55%;
   height: 3px;
   bottom: -12px;
-  background: #a178b9;
+  background: #71d2f6;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -328,7 +348,7 @@ ul {
   font-size: 60px;
   position: relative;
   text-align: left;
-  color: #cc8bf2;
+  color: #71d2f6;
   line-height: 1;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -344,7 +364,7 @@ ul {
   width: 60%;
   height: 1px;
   bottom: -13px;
-  background: #fff;
+  background: #71d2f6;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -365,8 +385,8 @@ ul {
 .form__input {
   width: 100%; /* Ancho completo */
   font: inherit; /* Heredar fuente */
-  background: #392657; /* Fondo morado oscuro */
-  border: 2px solid #a178b9; /* Borde morado */
+  background: #06194d; /* Fondo morado oscuro */
+  border: 2px solid #71d2f6; /* Borde morado */
   color: #fff; /* Texto blanco */
   padding: 15px;
   border-radius: 10px; /* Bordes redondeados */
@@ -374,7 +394,7 @@ ul {
 }
 
 .form__input::placeholder {
-  color: #fff;
+  color: #ffffff;
 }
 
 .form__input:active,
@@ -389,7 +409,7 @@ ul {
   font: inherit;
   font-weight: 800; /* Texto en negrita */
   color: #fff; /* Texto blanco */
-  background: linear-gradient(111.97deg, #CC8BF2 35.63%, rgba(204, 139, 242, 0) 150.16%); /* Gradiente morado */
+  background: linear-gradient(111.97deg, #71d2f6 35.63%, #24497d 150.16%); /* Gradiente morado */
   filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25)); /* Sombra suave */
   padding: 15px 30px;
   border-radius: 20px; /* Bordes muy redondeados */

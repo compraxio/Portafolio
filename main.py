@@ -1,8 +1,21 @@
 # Importación de módulos necesarios de Flask
 from flask import Flask, render_template, request, redirect
 from flask_mail import Mail, Message
+from flask_sqlalchemy import SQLAlchemy
 # Inicialización de la aplicación Flask
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///contactos.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+class formulario(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    Mensaje = db.Column(db.String(500), nullable=False)
+    email = db.Column(db.String(120), nullable=False)
+
+with app.app_context():
+    db.create_all()
+# Configuración de Flask-Mail para el envío de correos
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
@@ -59,11 +72,14 @@ def gracias():
 
             try:
                 msg = Message("Nuevo mensaje del portafolio", 
-                            sender="luisangelacu10@gmail.com", 
+                            sender=correo, 
                             recipients=["luisangelacu10@gmail.com"])
                 msg.body = f"De: {correo}\nMensaje: {mensaje}"
                 mail.send(msg)
-                return render_template('gracias.html')
+                NuevoFormulario = formulario(Mensaje=mensaje, email=correo)
+                db.session.add(NuevoFormulario)
+                db.session.commit()
+                return render_template('gracias.html', )
             except Exception as e:
                 print(f"Error al enviar el correo: {e}")
                 return redirect("/")
@@ -73,5 +89,11 @@ def gracias():
         return redirect("/")
     except KeyError:
         return redirect("/")
+@app.route('/mensajes')
+def mensajes():
+    comentarios = formulario.query.all()
+    return render_template('Ver-otros-comentarios.html', comentarios=comentarios)
 if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)

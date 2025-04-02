@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+</head>
+<body class="Formulario">
+    <div style="min-height: 100vh; display: flex; flex-direction: column;">
+        <h2 class="formulario-resultados__titulo" style="color: #71d2f6; text-align: center; padding: 50px 0px 30px 0px; width: 100%;">¡Mira otros comentarios!</h2>
+        <div style="flex: 1;">
+            <ul class="main" style="display: flex; flex-direction: column; gap: 20px; padding: 20px;">
+                {% for opiniones in comentarios %}
+                <li class="formulario-resultados form-yo" style="max-width: 600px; text-align: center; margin: 0 auto; box-shadow: 0px 0px 10px 0px#71d2f6">
+                    <p class="formulario-resultados__campo form-yo2" style="box-shadow: 0px 0px 10px 0px#71d2f6"><strong>Correo:</strong> {{opiniones.email}}</p>
+                    <p class="formulario-resultados__campo form-yo2" style="box-shadow: 0px 0px 10px 0px#71d2f6"><strong>Mensaje:</strong> {{opiniones.Mensaje}}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div style="text-align: center; padding: 30px 0; margin-top: auto;">
+            <a href="/" class="for_comentarios">Volver al inicio</a>
+        </div>
+    </div>
+</body>
+</html>
